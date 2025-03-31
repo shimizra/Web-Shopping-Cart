@@ -76,6 +76,16 @@ function updateCartSummary() {
     });
 
     document.getElementById('total-price').innerText = totalPrice.toFixed(2);
-    shippingElement.innerText = totalItems === 0 ? '0.00' : (totalItems > 4 ? 10 : 7).toFixed(2);
+    
+    if (totalItems === 0)
+     {
+         document.getElementById('shipping').innerText = 0;
+     }
+     else
+     {
+         document.getElementById('shipping').innerText = totalItems > 4 ? '10.00' : '7.00';
+     }
+
+}
 
 getProducts();
