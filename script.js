@@ -76,7 +76,7 @@ function updateCartSummary() {
     });
 
     document.getElementById('total-price').innerText = totalPrice.toFixed(2);
-    document.getElementById('shipping').innerText = totalItems > 4 ? '10.00' : '0.00';
+    document.getElementById('shipping').innerText = totalItems > 4 ? '10.00' : '7.00';
 }
 
 getProducts();
